@@ -11,10 +11,12 @@ const Footer = ({ isDarkMode }) => {
             © 2025 Text Editor. Built with React & Tailwind CSS.
           </div>
           <div className="flex items-center space-x-4 text-sm">
-            <span>Made with ❤️</span>
+            <span>Made with ❤️ By Gagan Dhiman</span>
             <div className="flex space-x-3">
               <a 
-                href="#" 
+                href="https://github.com/dhimangagann" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`hover:text-blue-400 transition-colors ${
                   isDarkMode ? 'text-gray-400' : 'text-gray-300'
                 }`}
@@ -22,12 +24,14 @@ const Footer = ({ isDarkMode }) => {
                 GitHub
               </a>
               <a 
-                href="#" 
+                href="https://github.com/dhimangagann/text-editor" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`hover:text-blue-400 transition-colors ${
                   isDarkMode ? 'text-gray-400' : 'text-gray-300'
                 }`}
               >
-                Docs
+                Repository
               </a>
             </div>
           </div>

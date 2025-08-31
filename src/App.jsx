@@ -42,11 +42,11 @@ function App() {
   }
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
+    <div className={`min-h-screen flex flex-col transition-colors duration-300 ${
       isDarkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-900'
     }`}>
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <div className="container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold opacity-75">
             Enter your text here..
@@ -65,7 +65,6 @@ function App() {
             }`}
           />
           
-          {}
           <div className="flex flex-wrap gap-3 mt-4 justify-center">
             <button
               onClick={handleUppercase}
@@ -150,7 +149,7 @@ function App() {
             Characters: {text.length} | Words: {text.trim() ? text.trim().split(/\s+/).length : 0}
           </div>
         </div>
-      </div>
+      </main>
       <Footer isDarkMode={isDarkMode} />
     </div>
   )
