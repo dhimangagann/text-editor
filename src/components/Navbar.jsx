@@ -6,14 +6,23 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       <div className={`navbar flex justify-between items-center px-6 py-4 transition-colors duration-300 ${
         isDarkMode ? 'bg-gray-800 text-white' : 'bg-navy text-white'
       }`}>
-        <h1 className="text-2xl font-bold">Text Editor</h1>
+        <div className="flex items-center space-x-3">
+          <div className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg transition-all duration-300 ${
+            isDarkMode 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-blue-500 text-white'
+          }`}>
+            T
+          </div>
+          <h1 className="text-2xl font-bold">Text Editor</h1>
+        </div>
         
         <button
           onClick={toggleTheme}
           className={`p-2 rounded-full transition-all duration-300 hover:scale-110 ${
             isDarkMode 
-              ? 'bg-yellow-400 text-gray-900 hover:bg-yellow-300' 
-              : 'bg-gray-700 text-yellow-400 hover:bg-gray-600'
+              ? 'bg-gray-700 hover:bg-gray-600 text-yellow-400' 
+              : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
           }`}
           aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
         >
