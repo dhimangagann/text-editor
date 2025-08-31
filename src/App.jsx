@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from "./components/Navbar"
+import Footer from './components/Footer'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -150,6 +151,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer isDarkMode={isDarkMode} />
     </div>
   )
 }
